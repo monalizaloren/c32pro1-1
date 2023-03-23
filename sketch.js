@@ -36,11 +36,12 @@ function preload()
   food = loadImage('melon.png');
   rabbit = loadImage('Rabbit-01.png');
 
-  bk_song = loadSound('sound1.mp3');
-  sad_sound = loadSound("sad.wav")
-  cut_sound = loadSound('rope_cut.mp3');
-  eating_sound = loadSound('eating_sound.mp3');
-  air = loadSound('air.wav');
+  //Utilize o código que carrega as imagens
+  bk_song = ???('sound1.mp3');
+  sad_sound = ???("sad.wav")
+  cut_sound = ???('rope_cut.mp3');
+  eating_sound = ???('eating_sound.mp3');
+  air = ???('air.wav');
 
   blink = loadAnimation("blink_1.png","blink_2.png","blink_3.png");
   eat = loadAnimation("eat_0.png" , "eat_1.png","eat_2.png","eat_3.png","eat_4.png");
@@ -69,15 +70,16 @@ function setup() {
   button.size(50,50);
   button.mouseClicked(drop);
 
-  blower = createImg('balloon.png');
-  blower.position(10,250);
-  blower.size(150,100);
-  blower.mouseClicked(airblow);
+  blower = ???('balloon.png');
+  blower.???(10,250);
+  blower.???(150,100);
+  blower.???(airblow);
 
   mute_btn = createImg('mute.png');
-  mute_btn.position(450,20);
-  mute_btn.size(50,50);
-  mute_btn.mouseClicked(mute);
+  //Posição 450, 20
+  //Tamanho: 50,50
+  //Quando for clicado: mute
+  //???
   
   rope = new Rope(7,{x:245,y:30});
   ground = new Ground(200,690,600,20);
@@ -175,13 +177,16 @@ function collide(body,sprite)
 
 function airblow()
 {
-  Matter.Body.applyForce(fruit,{x:0,y:0},{x:0.01,y:0});
+  //Utilize o código que aplica força em um corpo
+????(fruit,{x:0,y:0},{x:0.01,y:0});
   air.play();
 }
 
 
 function mute()
 {
+  //Se o som de fundo está tocando, faça ele parar
+  //Senão, fala ele tocar
   if(bk_song.isPlaying())
      {
       bk_song.stop();
